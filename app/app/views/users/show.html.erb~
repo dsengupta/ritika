@@ -1,0 +1,5 @@
+<h1>users#show</h1>
+<label>name :</label> <%= @user.name %><br>
+<label>email id: </label> <%= @user.email %>
+<br><br>
+<%= link_to 'index page' ,users_path %>

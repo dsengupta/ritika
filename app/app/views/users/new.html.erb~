@@ -1,0 +1,12 @@
+<h1>user#new</h1>
+<%=form_for (@user) do|user| %>
+<%=user.label :name,"name" %>
+<%=user.text_field :name %>
+<br>
+<%=user.label :email,"email" %>
+<%=user.text_field :email %>
+<br>
+<%=user.submit 'submit' %>
+<%end%>
+<br><br>
+<%= link_to 'index page', users_path %>
