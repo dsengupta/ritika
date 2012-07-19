@@ -10,13 +10,17 @@ def new
 end
 def create 
 User.create!(params[:user])
-redirect_to :controller => "users", :action => 'index'
+redirect_to users_path
 end
 def destroy
 User.find(params[:id]).destroy
-redirect_to :controller => "users", :action => 'index'
+redirect_to users_path
 end 
 def edit 
 @user= User.find(params[:id])
+end
+def update
+@user = User.find(params[:id])
+@user.update_attributes(params[:user])
 end
 end
