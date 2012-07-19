@@ -1,0 +1,15 @@
+class User < ActiveRecord::Base
+   attr_accessible :name, :email
+validates :name, :presence => true
+validates :email,:presence =>true
+before_create: ensure_login_has_a_value
+after_create: ensure_capital
+protected def ensure_login_has_a_value
+if name.nil?
+self.name=email
+end
+
+protected def ensure_capital
+name=name.capitalize
+end
+end

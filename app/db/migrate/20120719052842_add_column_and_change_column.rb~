@@ -1,0 +1,12 @@
+class AddColumnAndChangeColumn < ActiveRecord::Migration
+  def up
+     add_column :users,:contact ,:integer
+	add_column :users,:user_type,:integer
+	rename_column :users,:name,:username
+  end
+
+  def down
+	remove_column :users,:contactno
+	remove_column :users,:user_type
+  end
+end
