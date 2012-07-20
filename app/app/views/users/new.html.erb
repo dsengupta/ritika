@@ -6,7 +6,22 @@
 <%=user.label :email,"email" %>
 <%=user.text_field :email %>
 <br>
+<%=user.label :first_name,"first_name" %>
+<%=user.text_field :first_name%>
+<br>
+<%=user.label :last_name,"last_name" %>
+<%=user.text_field :last_name %>
+<br>
+<%=user.label :full_name,"full_name" %>
+<%=user.text_field :full_name %>
+<br>
+<%=user.label :contact,"contact" %>
+<%=user.text_field :contact %>
+<br>
+<%=user.label :user_type,"user_type" %>
+<%=user.text_field :user_type %>
+<br>
 <%=user.submit "add" %>
-<%end%>
+<%end%><br>
 <br><br>
 <%= link_to 'back', users_path %>

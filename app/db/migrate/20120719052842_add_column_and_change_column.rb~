@@ -6,7 +6,8 @@ class AddColumnAndChangeColumn < ActiveRecord::Migration
   end
 
   def down
-	remove_column :users,:contactno
+	remove_column :users,:contact
 	remove_column :users,:user_type
+	rename_column :users,:username,:name
   end
 end

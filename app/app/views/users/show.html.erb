@@ -1,6 +1,13 @@
 <h1>users#show</h1><table>
 <tr><td><label>name :</label> </td><td><%= @user.name %></td></tr>
 <tr><td><label>email id: </label></td> <td><%= @user.email %></td></tr>
+<tr><td><label>posts:</label></td><td>
+<% @user.posts.each do |post| %>
+<%= post.title %>
+
+<%= post.description %>
+<%end%>
+</td></tr>
 </table>
 <br><br>
 <%= link_to 'back' ,users_path %>

@@ -1,5 +1,7 @@
-<h1>users#show</h1>
-<label>name :</label> <%= @user.name %><br>
-<label>email id: </label> <%= @user.email %>
+<h1>users#show</h1><table>
+<tr><td><label>name :</label> </td><td><%= @user.name %></td></tr>
+<tr><td><label>email id: </label></td> <td><%= @user.email %></td></tr>
+<tr><td><label>orders:</label></td><td><%= @user.orders %></td></tr>
+</table>
 <br><br>
-<%= link_to 'index page' ,users_path %>
+<%= link_to 'back' ,users_path %>

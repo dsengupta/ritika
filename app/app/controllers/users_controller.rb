@@ -7,10 +7,12 @@ def show
 end
 def new
 @user=User.new
+
 end
 def create 
 User.create!(params[:user])
 redirect_to users_path
+
 end
 def destroy
 User.find(params[:id]).destroy

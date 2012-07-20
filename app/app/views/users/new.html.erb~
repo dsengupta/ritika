@@ -6,7 +6,35 @@
 <%=user.label :email,"email" %>
 <%=user.text_field :email %>
 <br>
-<%=user.submit 'submit' %>
+<%=user.label :first_name,"first_name" %>
+<%=user.text_field :first_name%>
+<br>
+<%=user.label :last_name,"last_name" %>
+<%=user.text_field :last_name %>
+<br>
+<%=user.label :full_name,"full_name" %>
+<%=user.text_field :full_name %>
+<br>
+<%=user.label :contact,"contact" %>
+<%=user.text_field :contact %>
+<br>
+<%=user.label :user_type,"user_type" %>
+<%=user.text_field :user_type %>
+<br>
+<%=user.submit "add" %>
+<%end%><br>
+<h1>post#index</h1>
+
+<%=form_for (@post) do|post| %>
+<%=post.label :title,"title" %>
+<%=post.text_field :title %>
+<br>
+<%=post.label :description,"description" %>
+<%=post.text_field :description %>
+<br>
+<%=post.submit "add post" %>
 <%end%>
+
+
 <br><br>
-<%= link_to 'index page', users_path %>
+<%= link_to 'back', users_path %>
