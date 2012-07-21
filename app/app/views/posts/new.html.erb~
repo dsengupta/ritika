@@ -1,6 +1,7 @@
 <h1>post#index</h1>
 
-<%=form_for (@post) do|post| %>
+<%=form_for @post, :url => user_posts_path(@user.id),
+ :html => {:method => "post"}  do|post| %>
 <%=post.label :title,"title" %>
 <%=post.text_field :title %>
 <br>

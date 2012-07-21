@@ -1,4 +1,4 @@
-<h1>post#index</h1>
+<h1>post#new</h1>
 
 <%=form_for @post, :url => user_posts_path(@user.id),
  :html => {:method => "post"}  do|post| %>
@@ -10,5 +10,6 @@
 <br>
 <%=post.submit "add post" %>
 <%end%>
+<%= link_to 'back' ,users_path %>
 
 
