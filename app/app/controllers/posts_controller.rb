@@ -14,4 +14,9 @@ def show
 @user=User.find(params[:user_id])
 @post=@user.posts.find(params[:id])
 end
+def delete
+@user=User.find(params[:user_id])
+@post=@user.posts.find(params[:id]).destroy
+
+end
 end

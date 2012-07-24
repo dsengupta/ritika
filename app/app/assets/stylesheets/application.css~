@@ -13,43 +13,22 @@
  */
 
 * { padding :0px; margin :0px;}
-body{
-background-color: #e9e9e9;
-font-family: arial,SANSerif;
-font-size: 12px;
-font-color: #3f3f3f;
-}
-
-a{color:#000000;text-decoration:none;
-font-size:18px;}
-a:hover{color:#0085b1;
-text-decoration: none;}
-#logo{
-margin:12px;
-padding:5px;
-float:left;
-}
-h2{
-font-family: georgia,Serif;
-font-size: 24px;
-font-color: #325101 ;
-text-align :right;
-margin:4px;
-padding:7px;
+a { color: #000000; 
+font-size: 18px;}
+a.hover { color: #0085b1;}
+body { font-size:12px;
+background-color: #ffffff;}
+li
+{
+list-style-type:none;
 }
 h2 { float:right;
 font-size:20px; 
 margin :10px;}
-
-.clearfix { clear :both;
-height:0;
-border:dashed 1px #999999;
-margin:7px;
-}
-#footer ul {list-style:none;
-float: right;}
-#footer ul li{ display :inline;
-margin:5px;
-padding:8px;
-}
+#logo { float:left
+height: 10;
+width :10; }
+.clearfix {
+clear:both;}
+#footer { float:right}
 
