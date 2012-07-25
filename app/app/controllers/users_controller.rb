@@ -12,6 +12,7 @@ def new
 end
 def create 
 User.create!(params[:user])
+UserMailer.welcome_email(@user).deliver
 redirect_to users_path
 
 end
