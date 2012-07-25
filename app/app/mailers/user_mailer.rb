@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default :from => "from@example.com"
+  default :from => "ritika@kreeti.com"
 
 def welcome_email(user)
     @user = user
-    @url  = "http://example.com/login"
-    mail(:to => user.email, :subject => "Welcome to My Awesome Site")
+    @url  = "http://localhost:3000/users"
+    mail(:to => user.email, :subject => "Welcome")
   end
 end
