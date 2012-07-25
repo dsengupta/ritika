@@ -7,7 +7,7 @@ posts:
 <% @user.posts.each do |post| %>
 <ul><li><label>title: </label><%= post.title %>
 <%= link_to 'show description' ,user_post_path(@user, post) %>
-<%= link_to 'delete' ,user_post_path(@user, post) %>
+<%= link_to 'delete' ,user_post_path(@user, post),:method =>'delete' %>
 
 </li></ul>
 
