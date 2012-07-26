@@ -12,21 +12,23 @@
  *= require_tree .
  */
 
-* { padding :0px; margin :0px;}
+
 
 
 #yield {
-height : 700px;}
+height : 500px;}
 
 body{
 background-color: #e9e9e9;
 font-family: arial,SANSerif;
-font-size: 12px;
+font-size: 24px;
 font-color: #3f3f3f;
+margin:46px;
+padding :-8px;
 }
 #container {
 background-color:#ffffff;
-width : 700px;
+width : 686px;
 margin : 0 auto;
 overflow:hidden;}
 
@@ -37,17 +39,17 @@ a:hover{color:#0085b1;
 text-decoration: none;}
 
 #logo{
-margin:12px;
-padding:5px;
+margin:24px;
+padding:9px;
 float:left;
 }
 h2{
 font-family: georgia,Serif;
-font-size: 24px;
+font-size: 18px;
 float: left;
 font-color: #325101 ;
-margin:4px;
-padding:7px;
+margin:7px;
+padding:11px;
 }
 #navlist li{
 
@@ -95,6 +97,6 @@ margin:7px;
 float: right;}
 #footer ul li{ display :inline;
 margin:5px;
-padding:8px;
+padding:3px;
 }
 

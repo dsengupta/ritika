@@ -1,17 +1,14 @@
 <h1>users#show</h1>
-<table>
+<table border =4>
 <tr><td><label>name :</label> </td><td><%= @user.name %></td></tr>
 <tr><td><label>email id: </label></td> <td>
-<%= @user.email %></td></tr></table
-posts:
+<%= @user.email %></td></tr></table>
+
 <% @user.posts.each do |post| %>
-<ul><li><label>title: </label><%= post.title %>
-<%= link_to 'show description' ,user_post_path(@user, post) %>
-<%= link_to 'delete' ,user_post_path(@user, post),:method =>'delete' %>
-
-</li></ul>
-
-
+<ul><li><label><strong>title:</strong> </label><%= post.title %>
+<%= link_to 'description' ,user_post_path(@user, post) %>
+<%= link_to 'delete' ,user_post_path(@user, post),:method =>'delete' %></li>
+</ul>
 <%end%>
 <br><br>
 

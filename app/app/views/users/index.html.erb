@@ -1,15 +1,12 @@
 <h1>users#index</h1>
 
-<ul>
+<table border=5>
 <% @users.each do|user| %>
-<li><%= user.name %>  <%= link_to 'show details', user_path(user)%>
-   <%= link_to 'edit user', edit_user_path(user)%>
-   <%= link_to 'delete user', user_path(user),:method => :delete %>
-<%= link_to 'create post', new_user_post_path(user) %>
-
-   
+<tr><td><%= user.name %></td><td>  <%= link_to 'show details', user_path(user)%>
+ </td><td>  <%= link_to 'edit user', edit_user_path(user)%></td><td>
+   <%= link_to 'delete user', user_path(user),:method => :delete %></td><td>
+<%= link_to 'create post', new_user_post_path(user) %></td></tr>
 <%end%>
- </li>
-</ul>
+ </table>
 <%= link_to 'add new user', new_user_path %>
 
