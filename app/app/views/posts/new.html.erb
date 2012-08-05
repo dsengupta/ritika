@@ -1,4 +1,4 @@
-<h1>post#new</h1>
+<h1>New Post</h1>
 
 <%=form_for @post, :url => user_posts_path(@user.id),
  :html => {:method => "post"}  do|post| %>
@@ -8,8 +8,8 @@
 <%=post.label :description,"description" %>
 <%=post.text_field :description %>
 <br>
-<%=post.submit "add post" %>
+<%=post.submit "Create Post" %>
 <%end%>
-<%= link_to 'back' ,users_path %>
+<%= link_to 'Back' ,users_path %>
 
 
