@@ -1,4 +1,4 @@
-<h1>Editing User</h1>
+<% provide(:title, 'edit') %><h1>Editing User</h1>
 <%=form_for(@user) do|user| %><table>
 <tr><td><%=user.label :name %></td>
 <td><%=user.text_field :name %></td>
