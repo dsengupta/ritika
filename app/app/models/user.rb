@@ -1,22 +1,8 @@
 class User < ActiveRecord::Base
- # attr_accessible :name, :email, :first_name,:last_name,:full_name,:contact, :user_type
+ # attr_accessible :name, :email
   has_many :posts, :dependent => :destroy
-
-  validates :name, :presence =>true, :length => {:maximum =>10}
-  validates :email,:presence =>true
-  before_validation :ensure_login_has_a_value
   
-
-
-
-
-
-
-
-
-
-
-
+  before_validation :ensure_login_has_a_vaue
 
   protected
   def ensure_login_has_a_value

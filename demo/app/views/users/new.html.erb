@@ -6,8 +6,13 @@
 <%=user.label :email,"Email" %>
 <%=user.text_field :email %>
 <br>
+<%=user.label :password,"Password" %>
+<%=user.password_field :password %>
 <br>
-<%=user.submit "Create User" %>
+ <%= user.label :password_confirmation, "Confirmation" %>
+      <%= user.password_field :password_confirmation %>
+<br>
+<%=user.submit "Create my account" %>
 <%end%><br>
 <br><br>
 <%= link_to 'Back', users_path %>
