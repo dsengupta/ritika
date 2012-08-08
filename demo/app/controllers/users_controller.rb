@@ -10,10 +10,14 @@ def new
 end
 
 def create 
-@user=User.create!(params[:user])
-redirect_to users_path
+ @user=User.new(params[:user])
+if @user.save
+flash[:sucess]="welcome"
+redirect_to user_path(@user)
+else
+render 'new'
 end
-
+end
 def destroy
 User.find(params[:id]).destroy
 redirect_to users_path
