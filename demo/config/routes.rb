@@ -7,7 +7,7 @@ get "static_pages/about"
 get "static_pages/contact" 
    resources:users
    resources:sessions,:only =>[:new,:create,:destroy]
-   resources:microposts
+    resources :microposts, :only=> [:create, :destroy]
  
   # The priority is based upon order of creation:
   # first created -> highest priority.

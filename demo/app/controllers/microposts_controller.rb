@@ -1,29 +1,31 @@
 class MicropostsController < ApplicationController
-def index 
-@posts=Micropost.all
-end
-def show
-@post=Micropost.find(params[:id])
-end
-def new
-@post=Micropost.new
-end
+  class MicropostsController < ApplicationController
+  before_filter :signed_in_user, :only=> [:create, :destroy]
+  before_filter :correct_user, :only=>:destroy
 
-def create 
-@post=Micropost.create!(params[:post])
-end
+  def index
+  end
 
-def destroy
-Micropost.find(params[:id]).destroy
-end 
+ def create
+    @micropost = current_user.microposts.build(params[:micropost])
+    if @micropost.save
+      flash[:success] = "Micropost created!"
+      redirect_to root_path
+    else
+      @feed_items = []
+      render 'static_pages/home'
+    end
+  end
 
-def edit 
-@post= Micropost.find(params[:id])
-end
+  def destroy
+    @micropost.destroy
+    redirect_to root_path
+  end
 
-def update
-@post = Micropost.find(params[:id])
-@post.update_attributes(params[:post])
-end
-end
+  private
 
+    def correct_user
+      @micropost = current_user.microposts.find_by_id(params[:id])
+      redirect_to root_path if @micropost.nil?
+    end
+end
