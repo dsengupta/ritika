@@ -1,11 +1,12 @@
-@import "bootstrap";
 
+
+@import "bootstrap";
 
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -86,9 +87,9 @@ footer {
 
 footer a {
   color: #555;
-}  
+}
 
-footer a:hover { 
+footer a:hover {
   color: #222;
 }
 
@@ -114,8 +115,8 @@ footer ul li {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -144,10 +145,7 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
+
 .stats {
   overflow: auto;
   a {
@@ -169,6 +167,13 @@ aside {
   }
 }
 
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+
 .user_avatars {
   overflow: auto;
   margin-top: 10px;
@@ -176,7 +181,6 @@ aside {
     margin: 1px 1px;
   }
 }
-
 
 
 
@@ -222,6 +226,7 @@ input, textarea, select, .uneditable-input {
 }
 
 
+/* microposts */
 
 .microposts {
   list-style: none;
@@ -238,7 +243,10 @@ input, textarea, select, .uneditable-input {
 .timestamp {
   color: $grayLight;
 }
-
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
 aside {
   textarea {
     height: 100px;
