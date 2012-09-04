@@ -9,8 +9,8 @@ end
 end
 
 def make_users
-  admin = User.create!(:name=>"admini",
-                       :email=>"admini@kreeti.com",
+  admin = User.create!(:name=>"admin1",
+                       :email=>"admin1@kreeti.com",
                        :password=>"foobar",
                        :password_confirmation=>"foobar")
   admin.toggle!(:admin)
@@ -18,8 +18,8 @@ def make_users
     name =Faker::Name.name
     email ="example-#{n+1}@kreeti.com"
     password ="password"
-    User.create!(:name=>"admini",
-                 :email=>"admini@kreeti.com",
+    User.create!(:name=>"admin1",
+                 :email=>"admin1@kreeti.com",
                  :password=>"foobar",
                  :password_confirmation=>"foobar")
   end

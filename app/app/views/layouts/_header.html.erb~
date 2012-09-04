@@ -1,8 +1,0 @@
-
-<div id="header">
-<div id="logo"><%= image_tag "rorlogo.jpg" %></div>
-<h2>First Rails Application</h2>
-<div class="clearfix" ></div>
-</div>
-
-

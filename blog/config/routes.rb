@@ -1,20 +1,9 @@
-Demo::Application.routes.draw do
-  get "static_pages/about"
+Blog::Application.routes.draw do
+  get "home/index"
+resources:posts do
+resources:comments
+end
 
-  get "static_pages/contact"
-
-  get "static_pages/home"
-  get "static_pages/help"
-  get "users/new"
-  
-   resources:users do
-	member do
-	get :following,:followers
-	end
-	end
-   resources:sessions,:only =>[:new,:create,:destroy]
-    resources :microposts, :only=> [:create, :destroy]
- resources :relationships, :only=> [:create, :destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -64,18 +53,11 @@ Demo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'static_pages#home'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-match "/home", :to => 'static_pages#home'
-match "/help", :to => 'static_pages#help'
-match "/about", :to => 'static_pages#about'
-match "/contact", :to => 'static_pages#contact'
-match '/signup', :to=> 'users#new'
-match '/signin', :to=> 'sessions#new'
-match '/signout', :to=> 'sessions#destroy', :via=> :delete
 end

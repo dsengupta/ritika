@@ -1,3 +1,0 @@
-<h1>post#show</h1>
-
-<%=@post.description %>

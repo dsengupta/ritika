@@ -1,3 +1,0 @@
-<h1>user#update</h1>
-updated
-<%= link_to 'Index', user_path %>

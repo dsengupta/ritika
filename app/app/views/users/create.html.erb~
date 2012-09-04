@@ -1,3 +1,0 @@
-<h1> user#create</h1>
-successfully updated
-<%= link_to 'Index', user_path %>
