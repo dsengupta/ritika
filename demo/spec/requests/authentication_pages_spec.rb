@@ -21,6 +21,7 @@ describe "Authentication" do
 
       it { should have_selector('title', text: 'Sign in') }
       it { should have_selector('div.alert.alert-error', text: 'Invalid') }
+end
       describe "after visiting another page" do
         before { click_link "Home" }
         it { should_not have_selector('div.alert.alert-error') }
@@ -57,7 +58,7 @@ describe "Authentication" do
 
       describe "submitting a DELETE request to the Users#destroy action" do
         before { delete user_path(user) }
-        specify { response.should redirect_to(root_path) }        
+        specify { response.should redirect_to(root_path) }
       end
     end
 
@@ -73,7 +74,7 @@ describe "Authentication" do
 
         describe "submitting to the destroy action" do
           before { delete relationship_path(1) }
-          specify { response.should redirect_to(signin_path) }          
+          specify { response.should redirect_to(signin_path) }
         end
       end
 
